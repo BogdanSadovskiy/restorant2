@@ -1,9 +1,7 @@
 
-z
-java:S1450"XRemove the "menuInput" field and declare it as a local variable in the relevant methods.(¹Ê±¹úÿÿÿÿ8’†á¶É1
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¾ŒÅúÿÿÿÿ8Ÿ†á¶É1
-G	java:S106"+Replace this use of System.out by a logger.(©éù¤8¤†á¶É1
-G	java:S106"+Replace this use of System.out by a logger.(ï‡Å 8§†á¶É1
-L	java:S106"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8ª†á¶É1
-L	java:S106"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8®†á¶É1
-L	java:S106#"+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8µ†á¶É1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¾ŒÅúÿÿÿÿ8”¸·É1
+G	java:S106"+Replace this use of System.out by a logger.(©éù¤8”¸·É1
+G	java:S106"+Replace this use of System.out by a logger.(ï‡Å 8”¸·É1
+L	java:S106"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8‘”¸·É1
+L	java:S106"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8‘”¸·É1
+L	java:S106!"+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8’”¸·É1
