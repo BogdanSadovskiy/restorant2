@@ -1,4 +1,4 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ýƒ£8Žø¹ÀÈ1
+m	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ýƒ£8½“í·É1
 Y
-java:S3066"<Lower the visibility of this setter or remove it altogether.(—Ýƒ£8»”¶ÀÈ1
+java:S3066!"<Lower the visibility of this setter or remove it altogether.(—Ýƒ£8¿“í·É1

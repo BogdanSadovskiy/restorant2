@@ -4,10 +4,9 @@ import java.util.*;
 
 public class Order {
     private List<Dishes> orderDishes = new ArrayList<>();
-    private List<Dishes> dishes = new ArrayList<>();
 
-    public void addDish(Dishes dish){
-        dishes.add(dish);
+    public void addDish(Dishes dish) {
+        orderDishes.add(dish);
     }
 
     public void showOrderedDishes() {
@@ -17,16 +16,20 @@ public class Order {
         order.add("\n");
         for (Dishes d : orderDishes) {
             order.add("      Position #" + position);
-            order.add(" " + d.name());
+            order.add(" " + d.name() + " " + d.getPrice() + '$');
             if (d.getAddIngredients().size() > 0) {
                 for (Ingredients i : d.getAddIngredients()) {
-                    order.add("    " + i.name() + i.getPrice() + '$');
+                    order.add("    " + i.name() + ' ' + i.getPrice() + '$');
                 }
             }
-            order.add("   Price - " + d.getPrice() + '$');
+            order.add("   Price - " + d.getPriceWithIngredient() + '$');
             order.add("\n");
         }
         frame(order);
+    }
+
+    public Boolean isOrderEmpty() {
+        return this.orderDishes.size() == 0;
     }
 
     public void frame(List<String> txt) {

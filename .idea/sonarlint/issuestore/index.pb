@@ -74,3 +74,5 @@ Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf302663
 Q.idea/sonarlint/securityhotspotstore/a/b/abe25e851ee828e40a94fcb1c1be6f78ff7a04cf,1\c\1cba3ad75947c1f71a8c3d84410fbd88ca84eee7
 \
 ,src/main/java/com/restorant/PurseNumber.java,5\b\5bd31c3a09189af4b720cffcba47eefffee250ba
+W
+'src/main/java/com/restorant/Return.java,c\6\c68bfd61b6c08c611950e7bd3f5bb41a53d96e19
