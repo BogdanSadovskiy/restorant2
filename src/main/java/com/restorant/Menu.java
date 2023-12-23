@@ -4,10 +4,11 @@ import java.io.PrintStream;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Menu {
-    private Scanner scanner = new Scanner(System.in);
+    private  Scanner scanner = new Scanner(System.in);
     private int iterator;
     private String menuInput;
     private int pursedNumber;
@@ -25,7 +26,7 @@ public class Menu {
         iterator = 1;
         this.menuInput = scanner.nextLine();
 
-        if (menuInput == "e" || menuInput == "E") {
+        if (Objects.equals(menuInput, "e") || "E".equals(menuInput)) {
             return;
         }
         try {

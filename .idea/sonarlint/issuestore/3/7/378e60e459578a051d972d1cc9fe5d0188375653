@@ -1,13 +1,9 @@
 
-^
-java:S4973"<Strings and Boxed types should be compared using "equals()".(¸¥³Èûÿÿÿÿ8Ú›îÂÈ1
-^
-java:S4973"<Strings and Boxed types should be compared using "equals()".(¸¥³Èûÿÿÿÿ8Ú›îÂÈ1
 z
-java:S1450"XRemove the "menuInput" field and declare it as a local variable in the relevant methods.(¹Ê±¹úÿÿÿÿ8Û›îÂÈ1
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¾ŒÅúÿÿÿÿ8ß›îÂÈ1
-G	java:S106"+Replace this use of System.out by a logger.(©éù¤8à›îÂÈ1
-G	java:S106"+Replace this use of System.out by a logger.(ï‡Å 8à›îÂÈ1
-L	java:S106"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8à›îÂÈ1
-L	java:S106"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8à›îÂÈ1
-L	java:S106""+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8à›îÂÈ1
+java:S1450"XRemove the "menuInput" field and declare it as a local variable in the relevant methods.(¹Ê±¹úÿÿÿÿ8’†á¶É1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¾ŒÅúÿÿÿÿ8Ÿ†á¶É1
+G	java:S106"+Replace this use of System.out by a logger.(©éù¤8¤†á¶É1
+G	java:S106"+Replace this use of System.out by a logger.(ï‡Å 8§†á¶É1
+L	java:S106"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8ª†á¶É1
+L	java:S106"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8®†á¶É1
+L	java:S106#"+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8µ†á¶É1
