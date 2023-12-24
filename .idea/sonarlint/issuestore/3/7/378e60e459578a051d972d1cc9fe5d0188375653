@@ -1,20 +1,20 @@
 
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÒ­Í8“¹„»É1
-L	java:S106"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8“¹„»É1
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÁˆ²8”¹„»É1
-L	java:S106"+Replace this use of System.out by a logger.(Ì™¿çøÿÿÿÿ8”¹„»É1
-G	java:S1064"+Replace this use of System.out by a logger.(Ö“’8•¹„»É1
-o	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šâ¿˜úÿÿÿÿ8•¹„»É1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÒ­Í8Ÿ·üêÉ1
+L	java:S106"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8 ·üêÉ1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÁˆ²8¡·üêÉ1
+L	java:S106"+Replace this use of System.out by a logger.(Ì™¿çøÿÿÿÿ8¢·üêÉ1
+G	java:S1061"+Replace this use of System.out by a logger.(Ö“’8¬·üêÉ1
+o	java:S1006"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šâ¿˜úÿÿÿÿ8¬·üêÉ1
 _
-java:S1854?"=Remove this useless assignment to local variable "menuInput".(¬»·ùÿÿÿÿ8•¹„»É1
-G	java:S106:"+Replace this use of System.out by a logger.(©éù¤8•¹„»É1
-G	java:S106;"+Replace this use of System.out by a logger.(ÎÓ‹´8–¹„»É1
-L	java:S106="+Replace this use of System.out by a logger.(âÕşüıÿÿÿÿ8–¹„»É1
-L	java:S106>"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8–¹„»É1
+java:S1854<"=Remove this useless assignment to local variable "menuInput".(¬»·ùÿÿÿÿ8¬·üêÉ1
+G	java:S1067"+Replace this use of System.out by a logger.(©éù¤8­·üêÉ1
+G	java:S1068"+Replace this use of System.out by a logger.(ÎÓ‹´8­·üêÉ1
+L	java:S106:"+Replace this use of System.out by a logger.(âÕşüıÿÿÿÿ8®·üêÉ1
+L	java:S106;"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8¯·üêÉ1
 P
-java:S1481?".Remove this unused "menuInput" local variable.(¬»·ùÿÿÿÿ8–¹„»É1
-j	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Í³Œ8–¹„»É1
-G	java:S106D"+Replace this use of System.out by a logger.(©éù¤8—¹„»É1
-G	java:S106E"+Replace this use of System.out by a logger.(ï‡Å 8—¹„»É1
-L	java:S106H"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8—¹„»É1
-L	java:S106O"+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8—¹„»É1
+java:S1481<".Remove this unused "menuInput" local variable.(¬»·ùÿÿÿÿ8¯·üêÉ1
+j	java:S100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Í³Œ8¯·üêÉ1
+G	java:S106A"+Replace this use of System.out by a logger.(©éù¤8°·üêÉ1
+G	java:S106B"+Replace this use of System.out by a logger.(ï‡Å 8±·üêÉ1
+L	java:S106E"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8²·üêÉ1
+L	java:S106L"+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8´·üêÉ1

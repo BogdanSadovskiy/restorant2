@@ -30,16 +30,13 @@ public final class Menu {
         if (Objects.equals(input, "e") || "E".equals(input)) {
             return Return.EXIT;
         }
-        if (Objects.equals(input, "o") || "O".equals(input)) {
-            if (!order.isOrderEmpty()) {
-                return Return.ORDER;
-            }
-            return Return.ERROR;
+        if ((Objects.equals(input, "o") || "O".equals(input)) && !order.isOrderEmpty()) {
+            return Return.ORDER;
         }
         if (Objects.equals(input, "n") || "N".equals(input)) {
             return Return.NOTHING;
         }
-        if (PurseNumber.searchNumber(input)){
+        if (RegexStr.containsNumbers(input)) {
             Return.NUMBER.value = Integer.parseInt(input);
             return Return.NUMBER;
         }
@@ -78,7 +75,7 @@ public final class Menu {
         } else if (casesInput(menuInput) == Return.ERROR) {
             System.out.println("Wrong input");
         } else if (casesInput(menuInput) == Return.NUMBER &&
-                (Return.NUMBER.value >= 1 && Return.NUMBER.value  <= Dishes.values().length))  {
+                (Return.NUMBER.value >= 1 && Return.NUMBER.value <= Dishes.values().length)) {
             order.addDish(Dishes.values()[Return.NUMBER.value - 1]);
         }
         Main_Menu();
