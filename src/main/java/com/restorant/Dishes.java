@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum Dishes {
-    ANTIVEGETERIANA(195.00, "Four types of meat", null),
-    MEXICAN(160.00, "Salami, mozzarela", null);
+    ANTIVEGETERIANA(195.00, "Four types of meat", new ArrayList<Ingredients>()),
+    MEXICAN(160.00, "Salami, mozzarela", new ArrayList<Ingredients>());
 
     private double price;
     private double priceWithIngredient;

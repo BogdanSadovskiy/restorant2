@@ -6,11 +6,18 @@ public enum Return {
     NUMBER,
     NOTHING,
     ERROR;
-    public  int value;
+    private int value;
 
-    Return(){
+    Return() {
         this.value = 0;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
 
 }

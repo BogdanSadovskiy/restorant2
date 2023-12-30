@@ -1,10 +1,8 @@
 
-o
-java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Òò¯¬8õ‰‰¸É1
-L	java:S106,"+Replace this use of System.out by a logger.(óéĞõùÿÿÿÿ8÷‰‰¸É1
-L	java:S106."+Replace this use of System.out by a logger.(·ÿíÇıÿÿÿÿ8÷‰‰¸É1
-G	java:S1062"+Replace this use of System.out by a logger.(È¹¶ 8÷‰‰¸É1
-G	java:S1064"+Replace this use of System.out by a logger.(”¶¼§8ø‰‰¸É1
-G	java:S1066"+Replace this use of System.out by a logger.(¹ÔØü8ø‰‰¸É1
-L	java:S106:"+Replace this use of System.out by a logger.(óéĞõùÿÿÿÿ8ø‰‰¸É1
-L	java:S106<"+Replace this use of System.out by a logger.(·ÿíÇıÿÿÿÿ8ø‰‰¸É1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À•¥…8ÎÃÓË1
+L	java:S1061"+Replace this use of System.out by a logger.(‹Åúÿÿÿÿ8ØÃÓË1
+L	java:S1063"+Replace this use of System.out by a logger.(“ØõÒÿÿÿÿÿ8ÙÃÓË1
+L	java:S1065"+Replace this use of System.out by a logger.(óéĞõùÿÿÿÿ8ÙÃÓË1
+L	java:S106:"+Replace this use of System.out by a logger.(û²¦Òıÿÿÿÿ8ÛÃÓË1
+G	java:S106<"+Replace this use of System.out by a logger.(”¶¼§8ÜÃÓË1
+G	java:S106>"+Replace this use of System.out by a logger.(¹ÔØü8ÜÃÓË1

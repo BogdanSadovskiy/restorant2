@@ -66,12 +66,8 @@ Q.idea/sonarlint/securityhotspotstore/a/4/a40f2a20fbf69c538090f597f191e61daefa51
 Q.idea/sonarlint/securityhotspotstore/a/9/a981eeeedee3a58c7194ad0291834e7f6bce2d1a,5\5\5590c7a83045663776676d496cf4e5c7aa6575da
 Å
 Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,3\0\30205a209c6ce77c4cfc19a09e6f57c588b7fb88
-Å
-Q.idea/sonarlint/securityhotspotstore/a/b/abe25e851ee828e40a94fcb1c1be6f78ff7a04cf,1\c\1cba3ad75947c1f71a8c3d84410fbd88ca84eee7
 W
 'src/main/java/com/restorant/Return.java,c\6\c68bfd61b6c08c611950e7bd3f5bb41a53d96e19
-\
-,src/main/java/com/restorant/PurseNumber.java,5\b\5bd31c3a09189af4b720cffcba47eefffee250ba
 Y
 )src/main/java/com/restorant/RegexStr.java,c\e\ce43eac6cbffdca05397cf1af4a132dd485a9e84
 ]
@@ -80,3 +76,5 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 Å
 Q.idea/sonarlint/securityhotspotstore/5/b/5bd31c3a09189af4b720cffcba47eefffee250ba,4\7\47c00b4e20c99785e609a5f56e1f3114052e9819
+U
+%src/main/java/com/restorant/Wish.java,8\9\89057307d7b96b74b3ba336d12d4632a487c220f

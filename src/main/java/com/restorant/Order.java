@@ -8,57 +8,65 @@ public class Order {
     public void addDish(Dishes dish) {
         orderDishes.add(dish);
     }
-
-    public void showOrderedDishes() {
+    private List<String> CreatingOrder(){
         List<String> order = new ArrayList<>();
         int position = 1;
         order.add("      Order:");
-        order.add("\n");
+        order.add(" ");
         for (Dishes d : orderDishes) {
             order.add("      Position #" + position);
             order.add(" " + d.name() + " " + d.getPrice() + '$');
-            if (d.getAddIngredients().size() > 0) {
+            if (!d.getAddIngredients().isEmpty()) {
                 for (Ingredients i : d.getAddIngredients()) {
                     order.add("    " + i.name() + ' ' + i.getPrice() + '$');
                 }
             }
             order.add("   Price - " + d.getPriceWithIngredient() + '$');
-            order.add("\n");
+            order.add(" ");
+            position++;
         }
-        frame(order);
+        return order;
+    }
+    public void showOrderedDishes() {
+        frame(CreatingOrder());
     }
 
     public Boolean isOrderEmpty() {
-        return this.orderDishes.size() == 0;
+        return orderDishes.isEmpty();
     }
 
-    public void frame(List<String> txt) {
+    private int lengthOfLongestString(List<String> txt) {
         int maxString = 0;
         for (String str : txt) {
             if (str.length() > maxString) {
                 maxString = str.length();
             }
         }
-        for (int i = 0; i < maxString; i++) {
-            if (i == 0 || i == maxString - 1) {
-                System.out.println('+');
-            } else {
-                System.out.println('-');
-            }
+        return maxString;
+    }
+
+    private void borderFrame(int length) {
+        System.out.print('+');
+        for (int i = 0; i < length; i++) {
+                System.out.print('-');
         }
+        System.out.println('+');
+    }
+
+    private void contentFrame(List<String> txt, int length) {
         for (String str : txt) {
-            System.out.println('|' + str);
-            for (int i = 0; i < (maxString - str.length() - 1); i++) {
+            System.out.print('|' + str);
+            for (int i = 0; i < length - str.length(); i++) {
                 System.out.print(' ');
             }
             System.out.println('|');
         }
-        for (int i = 0; i < maxString; i++) {
-            if (i == 0 || i == maxString - 1) {
-                System.out.println('+');
-            } else {
-                System.out.println('-');
-            }
-        }
+    }
+
+    public void frame(List<String> txt) {
+        int length = lengthOfLongestString(txt);
+        borderFrame(length);
+        contentFrame(txt, length);
+        borderFrame(length);
     }
 }

@@ -1,4 +1,8 @@
 
-m	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ýƒ£8½“í·É1
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ýð™¬8ÜŠ¡îÉ1
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷¯Â‘üÿÿÿÿ8ýÔ¡îÉ1
+m	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ýƒ£8£í îÉ1
 Y
-java:S3066!"<Lower the visibility of this setter or remove it altogether.(—Ýƒ£8¿“í·É1
+java:S3066!"<Lower the visibility of this setter or remove it altogether.(—Ýƒ£8©í îÉ1
