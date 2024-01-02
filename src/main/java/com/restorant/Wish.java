@@ -39,9 +39,6 @@ public final class Wish {
         }
         return instance;
     }
-    protected Object clone() throws CloneNotSupportedException {
-        throw new CloneNotSupportedException();
-    }
 
     protected Object readResolve() {
         return getInstance();

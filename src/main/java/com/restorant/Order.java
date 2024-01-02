@@ -1,32 +1,55 @@
 package com.restorant;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 public class Order {
     private List<Dishes> orderDishes = new ArrayList<>();
+    private double orderPrice;
 
     public void addDish(Dishes dish) {
         orderDishes.add(dish);
     }
-    private List<String> CreatingOrder(){
+
+    public void addIngredients(Dishes dish) {
+
+    }
+
+    public List<Dishes> getOrderDishes() {
+        return this.orderDishes;
+    }
+
+    private String OrderPriceCalculating() {
+        double tmpPrice = 0;
+        for (Dishes d : orderDishes) {
+            tmpPrice += d.getPriceWithIngredient();
+        }
+        this.orderPrice = tmpPrice;
+        return String.format("%.2f", tmpPrice) ;
+    }
+
+    private List<String> CreatingOrder() {
         List<String> order = new ArrayList<>();
         int position = 1;
         order.add("      Order:");
         order.add(" ");
         for (Dishes d : orderDishes) {
             order.add("      Position #" + position);
-            order.add(" " + d.name() + " " + d.getPrice() + '$');
+            order.add(" " + d.name() + "   " + d.getPrice() + '$');
             if (!d.getAddIngredients().isEmpty()) {
                 for (Ingredients i : d.getAddIngredients()) {
                     order.add("    " + i.name() + ' ' + i.getPrice() + '$');
                 }
             }
-            order.add("   Price - " + d.getPriceWithIngredient() + '$');
+            order.add(" Position prise - " + String.format("%.2f",d.getPriceWithIngredient()) + '$');
             order.add(" ");
             position++;
         }
+        order.add(" PRICE - " + OrderPriceCalculating()+ "$");
         return order;
     }
+
     public void showOrderedDishes() {
         frame(CreatingOrder());
     }
@@ -48,7 +71,7 @@ public class Order {
     private void borderFrame(int length) {
         System.out.print('+');
         for (int i = 0; i < length; i++) {
-                System.out.print('-');
+            System.out.print('-');
         }
         System.out.println('+');
     }
@@ -64,7 +87,7 @@ public class Order {
     }
 
     public void frame(List<String> txt) {
-        int length = lengthOfLongestString(txt);
+        int length = lengthOfLongestString(txt) + 1;
         borderFrame(length);
         contentFrame(txt, length);
         borderFrame(length);

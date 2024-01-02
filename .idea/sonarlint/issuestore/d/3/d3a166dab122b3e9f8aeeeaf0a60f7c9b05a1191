@@ -1,8 +1,9 @@
 
 v
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(İğ™¬8ÜŠ¡îÉ1
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(İğ™¬8¹Á°ÏÌ1
 {
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷¯Â‘üÿÿÿÿ8ıÔ¡îÉ1
-m	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—İƒ£8£í îÉ1
-Y
-java:S3066!"<Lower the visibility of this setter or remove it altogether.(—İƒ£8©í îÉ1
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷¯Â‘üÿÿÿÿ8ºÁ°ÏÌ1
+r	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ØŞÚıÿÿÿÿ8ºÁ°ÏÌ1
+o	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ØŞÚıÿÿÿÿ8ÅÁ°ÏÌ1
+N
+java:S1128"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8ÈÁ°ÏÌ1

@@ -11,6 +11,7 @@ import java.util.Scanner;
 public final class Menu {
     private static Scanner scanner = new Scanner(System.in);
     private static Order order = new Order();
+
     public static void clearConsole() {
         String os = System.getProperty("os.name").toLowerCase();
         System.out.println(os);
@@ -62,7 +63,7 @@ public final class Menu {
         return Return.ERROR;
     }
 
-    private void viewIngredients() {
+    private static void viewIngredients() {
         int iterator = 1;
         for (Ingredients ingredient : Ingredients.values()) {
             System.out.println(iterator + " " + ingredient.name());
@@ -70,19 +71,25 @@ public final class Menu {
         }
     }
 
-    public void add_Ingredient_Menu(Dishes dishes) {
-        System.out.print("\033[H\033[2J"); //clear console
-        System.out.println('\t' + dishes.name() + "\n Add any ingredients?\n");
-        viewIngredients();
-        System.out.println("N - add nothing");
-        System.out.println("\nE - exit\n");
-        String menuInput = scanner.nextLine();
-
+    private static void add_Ingredient_Menu(Dishes dish) {
+        //clearConsole(); //clear console
+        while (true) {
+            System.out.println("\t Add any ingredients for " + dish.name() + "?\n");
+            viewIngredients();
+            System.out.println("\nE - exit\n");
+            String menuInput = scanner.nextLine();
+            Return thisCase = casesInput(menuInput);
+            if (thisCase == Return.EXIT) return;
+            else if (thisCase == Return.NUMBER &&
+                    (thisCase.getValue() >= 1 && thisCase.getValue() <= Ingredients.values().length)) {
+                dish.AddIngredients(Ingredients.values()[thisCase.getValue() - 1]);
+            } else System.out.println("Wrong input");
+        }
     }
 
     public static void Main_Menu() {
         do {
-            clearConsole();
+            //clearConsole();
             System.out.println("\t\tMENU:");
             ReadDishes();
             IsOrderEmpty();
@@ -92,13 +99,12 @@ public final class Menu {
                 return;
             } else if (casesInput(menuInput) == Return.ORDER) {
                 order.showOrderedDishes();
-            } else if (casesInput(menuInput) == Return.ERROR) {
-                System.out.println("Wrong input");
             } else if (casesInput(menuInput) == Return.NUMBER &&
                     (Return.NUMBER.getValue() >= 1 && Return.NUMBER.getValue() <= Dishes.values().length)) {
                 order.addDish(Dishes.values()[Return.NUMBER.getValue() - 1]);
-            }
-        }while(true);
+                add_Ingredient_Menu(order.getOrderDishes().getLast());
+            } else System.out.println("Wrong input");
+        } while (true);
     }
 
 }

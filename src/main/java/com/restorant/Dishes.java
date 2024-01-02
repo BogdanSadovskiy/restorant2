@@ -1,5 +1,6 @@
 package com.restorant;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,14 +31,14 @@ public enum Dishes {
         return additionalIngredients;
     }
 
-    public void setAddIngredients(Ingredients Ingredients) {
-        this.additionalIngredients.add(Ingredients);
-        priceWithIngredient += Ingredients.getPrice();
+    public void AddIngredients(Ingredients Ingredient) {
+        this.additionalIngredients.add(Ingredient);
+        priceWithIngredient += Ingredient.getPrice();
     }
 
-    public void removeIngredients(Ingredients removeIngredients) {
-        this.additionalIngredients.remove(removeIngredients);
-        priceWithIngredient -= removeIngredients.getPrice();
+    public void removeIngredients(Ingredients removeIngredient) {
+        this.additionalIngredients.remove(removeIngredient);
+        priceWithIngredient -= removeIngredient.getPrice();
     }
 
     public String getDescription() {
