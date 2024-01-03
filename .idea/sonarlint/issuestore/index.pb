@@ -74,7 +74,7 @@ Y
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-Å
-Q.idea/sonarlint/securityhotspotstore/5/b/5bd31c3a09189af4b720cffcba47eefffee250ba,4\7\47c00b4e20c99785e609a5f56e1f3114052e9819
 U
 %src/main/java/com/restorant/Wish.java,8\9\89057307d7b96b74b3ba336d12d4632a487c220f
+[
++src/main/java/com/restorant/TwoNumbers.java,7\f\7faba12d0e0abaa325930529bc5e74fc4891f389

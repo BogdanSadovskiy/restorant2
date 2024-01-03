@@ -1,32 +1,37 @@
 
 D
-java:S5411,"(Use a primitive boolean expression here.(¬–®?8½ŠèÎÌ1
+java:S54110"(Use a primitive boolean expression here.(¬–®?8ïÎåÌ1
 J
-java:S54115"(Use a primitive boolean expression here.(Êáíªúÿÿÿÿ8¾ŠèÎÌ1
+java:S54119"(Use a primitive boolean expression here.(Êáíªúÿÿÿÿ8ïÎåÌ1
 \
-java:S1118":Add a private constructor to hide the implicit public one.(˜È Şüÿÿÿÿ8šÒêÎÌ1
-G	java:S106"+Replace this use of System.out by a logger.(’¤’ş8ÓŠèÎÌ1
+java:S1118":Add a private constructor to hide the implicit public one.(˜È Şüÿÿÿÿ8ÓïÎåÌ1
+G	java:S106"+Replace this use of System.out by a logger.(’¤’ş8ÖïÎåÌ1
 {
-java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ò¶È8ÓŠèÎÌ1
-L	java:S106"+Replace this use of System.out by a logger.(½×”˜ùÿÿÿÿ8ÔŠèÎÌ1
-G	java:S106"+Replace this use of System.out by a logger.(Œ´Ã¹8ÕŠèÎÌ1
-j	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÒ­Í8ÕŠèÎÌ1
-L	java:S106&"+Replace this use of System.out by a logger.(Öêú«øÿÿÿÿ8ÕŠèÎÌ1
-j	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÁˆ²8ÕŠèÎÌ1
-G	java:S106-"+Replace this use of System.out by a logger.(†œò¾8ÖŠèÎÌ1
-G	java:S106E"+Replace this use of System.out by a logger.(Ö“’8ØŠèÎÌ1
-o	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¶Óşÿÿÿÿ8ØŠèÎÌ1
-G	java:S106M"+Replace this use of System.out by a logger.(•Å¡Á8ÙŠèÎÌ1
-L	java:S106O"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8ÙŠèÎÌ1
-L	java:S106V"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8ÚŠèÎÌ1
-j	java:S100Z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Í³Œ8ÛŠèÎÌ1
-G	java:S106]"+Replace this use of System.out by a logger.(ï‡Å 8ÛŠèÎÌ1
-X	java:S125\"<This block of commented-out lines of code should be removed.(ª¤Õü8ÛŠèÎÌ1
-L	java:S106`"+Replace this use of System.out by a logger.(İ‚¯ÿÿÿÿÿ8ÜŠèÎÌ1
-L	java:S106j"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8İŠèÎÌ1
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ò¶È8ÖïÎåÌ1
+L	java:S106"+Replace this use of System.out by a logger.(½×”˜ùÿÿÿÿ8ØïÎåÌ1
+G	java:S106"+Replace this use of System.out by a logger.(Œ´Ã¹8ØïÎåÌ1
+j	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢áßÆ8ØïÎåÌ1
+L	java:S106""+Replace this use of System.out by a logger.(ÛÅåïùÿÿÿÿ8ÙïÎåÌ1
+G	java:S106#"+Replace this use of System.out by a logger.(»¥‡ñ8ÙïÎåÌ1
+j	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÒ­Í8ÙïÎåÌ1
+G	java:S106)"+Replace this use of System.out by a logger.(ÄŒ¿ƒ8ÙïÎåÌ1
+j	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÁˆ²8ÚïÎåÌ1
+G	java:S1061"+Replace this use of System.out by a logger.(†œò¾8ÚïÎåÌ1
+L	java:S106_"+Replace this use of System.out by a logger.(®´Ÿ¤úÿÿÿÿ8ŞïÎåÌ1
+[
+java:S1155g">Use isEmpty() to check whether the collection is empty or not.(¢£¨ë8ŞïÎåÌ1
+G	java:S106g"+Replace this use of System.out by a logger.(¢£¨ë8ŞïÎåÌ1
+o	java:S100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¶Óşÿÿÿÿ8ŞïÎåÌ1
+G	java:S106o"+Replace this use of System.out by a logger.(•Å¡Á8ßïÎåÌ1
+L	java:S106q"+Replace this use of System.out by a logger.(·üæøÿÿÿÿ8àïÎåÌ1
+L	java:S106y"+Replace this use of System.out by a logger.(¡¼¹ûÿÿÿÿ8áïÎåÌ1
+L	java:S106z"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8áïÎåÌ1
+i	java:S100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ã¬8áïÎåÌ1
+G	java:S106‡"+Replace this use of System.out by a logger.(ÿúÓw8ãïÎåÌ1
+M	java:S106‰"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8ãïÎåÌ1
+k	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Í³Œ8äïÎåÌ1
+Y	java:S125"<This block of commented-out lines of code should be removed.(ª¤Õü8äïÎåÌ1
+H	java:S106‘"+Replace this use of System.out by a logger.(ï‡Å 8äïÎåÌ1
+M	java:S106”"+Replace this use of System.out by a logger.(·üæøÿÿÿÿ8äïÎåÌ1
 M
-java:S1128"0Remove this unused import 'java.io.PrintStream'.(×ê’8òÊŒĞÌ1
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8òÊŒĞÌ1
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8òÊŒĞÌ1
+java:S1128"0Remove this unused import 'java.io.PrintStream'.(×ê’8åïÎåÌ1

@@ -35,11 +35,13 @@ public class Order {
         order.add("      Order:");
         order.add(" ");
         for (Dishes d : orderDishes) {
-            order.add("      Position #" + position);
-            order.add(" " + d.name() + "   " + d.getPrice() + '$');
+            order.add("        Position #" + position);
+            order.add("   " + d.name() + "   " + d.getPrice() + '$');
             if (!d.getAddIngredients().isEmpty()) {
+                int numberOfIngredients = 1;
                 for (Ingredients i : d.getAddIngredients()) {
-                    order.add("    " + i.name() + ' ' + i.getPrice() + '$');
+                    order.add("      " + numberOfIngredients + ") " + i.name() + ' ' + i.getPrice() + '$');
+                    numberOfIngredients++;
                 }
             }
             order.add(" Position prise - " + String.format("%.2f",d.getPriceWithIngredient()) + '$');

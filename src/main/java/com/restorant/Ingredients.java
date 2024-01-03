@@ -3,9 +3,10 @@ package com.restorant;
 public enum Ingredients {
 
 
-    MOZZARELLA(10.50),
+    CHEESE(10.50),
     PEPPER(5.99),
-    MEAT(21.99);
+    MEAT(21.99),
+    OLIVES(7.75);
     private double price;
     public double getPrice( ) {
         return price;
