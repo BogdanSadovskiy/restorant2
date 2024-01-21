@@ -1,37 +1,65 @@
 
+o
+java:S1192"LDefine a constant instead of duplicating this literal "Wrong input" 4 times.(ØíëÌüÿÿÿÿ8§ß Ï1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë±¤ú8¨ß Ï1
+m	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤°™Ğ8¨ß Ï1
+n	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹áŞ8¨ß Ï1
+s	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê±ôÁüÿÿÿÿ8©ß Ï1
+s	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê±ôÁüÿÿÿÿ8©ß Ï1
 D
-java:S54110"(Use a primitive boolean expression here.(¬–®?8ïÎåÌ1
+java:S5411?"(Use a primitive boolean expression here.(¬–®?8ªß Ï1
 J
-java:S54119"(Use a primitive boolean expression here.(Êáíªúÿÿÿÿ8ïÎåÌ1
+java:S5411M"(Use a primitive boolean expression here.(Êáíªúÿÿÿÿ8ªß Ï1
 \
-java:S1118":Add a private constructor to hide the implicit public one.(˜È Şüÿÿÿÿ8ÓïÎåÌ1
-G	java:S106"+Replace this use of System.out by a logger.(’¤’ş8ÖïÎåÌ1
+java:S1118":Add a private constructor to hide the implicit public one.(˜È Şüÿÿÿÿ8”ß Ï1
+G	java:S106"+Replace this use of System.out by a logger.(’¤’ş8™ß Ï1
 {
-java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ò¶È8ÖïÎåÌ1
-L	java:S106"+Replace this use of System.out by a logger.(½×”˜ùÿÿÿÿ8ØïÎåÌ1
-G	java:S106"+Replace this use of System.out by a logger.(Œ´Ã¹8ØïÎåÌ1
-j	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢áßÆ8ØïÎåÌ1
-L	java:S106""+Replace this use of System.out by a logger.(ÛÅåïùÿÿÿÿ8ÙïÎåÌ1
-G	java:S106#"+Replace this use of System.out by a logger.(»¥‡ñ8ÙïÎåÌ1
-j	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÒ­Í8ÙïÎåÌ1
-G	java:S106)"+Replace this use of System.out by a logger.(ÄŒ¿ƒ8ÙïÎåÌ1
-j	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÁˆ²8ÚïÎåÌ1
-G	java:S1061"+Replace this use of System.out by a logger.(†œò¾8ÚïÎåÌ1
-L	java:S106_"+Replace this use of System.out by a logger.(®´Ÿ¤úÿÿÿÿ8ŞïÎåÌ1
+java:S2142)"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ò¶È8šß Ï1
+L	java:S106$"+Replace this use of System.out by a logger.(½×”˜ùÿÿÿÿ8›ß Ï1
+G	java:S106*"+Replace this use of System.out by a logger.(Œ´Ã¹8œß Ï1
+i	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûİ;8œß Ï1
+L	java:S106/"+Replace this use of System.out by a logger.(ÛÅåïùÿÿÿÿ8œß Ï1
+G	java:S1060"+Replace this use of System.out by a logger.(»¥‡ñ8ß Ï1
+j	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÒ­Í8ß Ï1
+G	java:S1066"+Replace this use of System.out by a logger.(ÄŒ¿ƒ8ß Ï1
+G	java:S106:"+Replace this use of System.out by a logger.(ÅÅÅä8ß Ï1
+L	java:S106;"+Replace this use of System.out by a logger.(¨ƒ–¬üÿÿÿÿ8ß Ï1
+j	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÁˆ²8Ÿß Ï1
+G	java:S106@"+Replace this use of System.out by a logger.(†œò¾8Ÿß Ï1
+L	java:S106s"+Replace this use of System.out by a logger.(®´Ÿ¤úÿÿÿÿ8¤ß Ï1
 [
-java:S1155g">Use isEmpty() to check whether the collection is empty or not.(¢£¨ë8ŞïÎåÌ1
-G	java:S106g"+Replace this use of System.out by a logger.(¢£¨ë8ŞïÎåÌ1
-o	java:S100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¶Óşÿÿÿÿ8ŞïÎåÌ1
-G	java:S106o"+Replace this use of System.out by a logger.(•Å¡Á8ßïÎåÌ1
-L	java:S106q"+Replace this use of System.out by a logger.(·üæøÿÿÿÿ8àïÎåÌ1
-L	java:S106y"+Replace this use of System.out by a logger.(¡¼¹ûÿÿÿÿ8áïÎåÌ1
-L	java:S106z"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8áïÎåÌ1
-i	java:S100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ã¬8áïÎåÌ1
-G	java:S106‡"+Replace this use of System.out by a logger.(ÿúÓw8ãïÎåÌ1
-M	java:S106‰"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8ãïÎåÌ1
-k	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Í³Œ8äïÎåÌ1
-Y	java:S125"<This block of commented-out lines of code should be removed.(ª¤Õü8äïÎåÌ1
-H	java:S106‘"+Replace this use of System.out by a logger.(ï‡Å 8äïÎåÌ1
-M	java:S106”"+Replace this use of System.out by a logger.(·üæøÿÿÿÿ8äïÎåÌ1
+java:S1155{">Use isEmpty() to check whether the collection is empty or not.(¢£¨ë8¥ß Ï1
+G	java:S106{"+Replace this use of System.out by a logger.(¢£¨ë8¥ß Ï1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¶Óşÿÿÿÿ8¥ß Ï1
+H	java:S106ƒ"+Replace this use of System.out by a logger.(•Å¡Á8¦ß Ï1
+M	java:S106…"+Replace this use of System.out by a logger.(·üæøÿÿÿÿ8§ß Ï1
+M	java:S106"+Replace this use of System.out by a logger.(¡¼¹ûÿÿÿÿ8¨ß Ï1
+M	java:S106"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8©ß Ï1
+M	java:S106—"+Replace this use of System.out by a logger.(³‡öøÿÿÿÿ8ªß Ï1
+H	java:S106˜"+Replace this use of System.out by a logger.(«¥®’8ªß Ï1
+M	java:S106"+Replace this use of System.out by a logger.(“À’‡ùÿÿÿÿ8ªß Ï1
+H	java:S106©"+Replace this use of System.out by a logger.(¹µ¡8«ß Ï1
+H	java:S106ª"+Replace this use of System.out by a logger.(™¹–8«ß Ï1
+H	java:S106«"+Replace this use of System.out by a logger.(±Ûáˆ8«ß Ï1
+H	java:S106¬"+Replace this use of System.out by a logger.(åûšü8¬ß Ï1
+K	java:S108¸")Either remove or fill this block of code.(ªäÄËşÿÿÿÿ8­ß Ï1
+M	java:S106»"+Replace this use of System.out by a logger.(œˆÆıÿÿÿÿ8­ß Ï1
+H	java:S106Æ"+Replace this use of System.out by a logger.(ƒÃéâ8¯ß Ï1
+H	java:S106Ê"+Replace this use of System.out by a logger.(ƒÃéâ8¯ß Ï1
+k	java:S100Ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡€«ˆ8¯ß Ï1
+p	java:S100İ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ùúÿÿÿÿ8±ß Ï1
+M	java:S106à"+Replace this use of System.out by a logger.(Ğû©ıÿÿÿÿ8±ß Ï1
+H	java:S106á"+Replace this use of System.out by a logger.(½İ’õ8²ß Ï1
+M	java:S106â"+Replace this use of System.out by a logger.(¢ÿ«úÿÿÿÿ8²ß Ï1
+p	java:S100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È±¨›úÿÿÿÿ8³ß Ï1
+j	java:S100ó"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ã¬8µß Ï1
+G	java:S106ı"+Replace this use of System.out by a logger.(ÿúÓw8·ß Ï1
+M	java:S106ÿ"+Replace this use of System.out by a logger.(ØíëÌüÿÿÿÿ8¸ß Ï1
+p	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê±ôÁüÿÿÿÿ8¸ß Ï1
+Y	java:S125†"<This block of commented-out lines of code should be removed.(ª¤Õü8¹ß Ï1
+H	java:S106‰"+Replace this use of System.out by a logger.(ï‡Å 8¹ß Ï1
+M	java:S106Œ"+Replace this use of System.out by a logger.(·üæøÿÿÿÿ8ºß Ï1
 M
-java:S1128"0Remove this unused import 'java.io.PrintStream'.(×ê’8åïÎåÌ1
+java:S1128"0Remove this unused import 'java.io.PrintStream'.(×ê’8ÂÏŒñÒ1
+T
+java:S1144î"1Remove this unused private "OrderOptions" method.(È±¨›úÿÿÿÿ8ºß Ï1

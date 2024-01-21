@@ -8,7 +8,20 @@ import java.util.*;
 public final class Menu {
 
     private static Scanner scanner = new Scanner(System.in);
-    private static Order order = new Order();
+    private static Order order;
+    private static Bank bank;
+    private static CashWallet yourCashWallet;
+
+    private static void initializateOrder() {
+        if (order == null) order = new Order();
+    }
+
+    public static void addPaymentsInfo(Bank bank_, CashWallet cashWallet) {
+        bank = bank_;
+        yourCashWallet = cashWallet;
+    }
+
+
 
     public static void clearConsole() {
         String os = System.getProperty("os.name").toLowerCase();
@@ -30,7 +43,7 @@ public final class Menu {
         }
     }
 
-    private static void DrawLines(int n) {
+    public static void DrawLines(int n) {
         if (n == 1) System.out.println("\n------------------------------------------------------");
         else if (n == 2) System.out.println("------------------------------------------------------\n");
     }
@@ -42,6 +55,8 @@ public final class Menu {
                     " (" + d.getDescription() + ')' + " - " + d.getPrice() + "$");
             iterator++;
         }
+        System.out.println("e" + bank.sad().getYourMoney());
+        System.out.println("W" + yourCashWallet.getYourMoney());
     }
 
     private static void IsOrderEmpty() {
@@ -49,7 +64,12 @@ public final class Menu {
             System.out.println("O - go to order");
         }
     }
-
+    private static Return executabledExit(Return case_) {
+        if (case_ == Return.EXIT) {
+            return Return.EXITEXECUTABLED;
+        }
+        return case_;
+    }
     private static Return casesInput(String input) {
         if (Objects.equals(input, "e") || "E".equals(input)) {
             return Return.EXIT;
@@ -123,12 +143,110 @@ public final class Menu {
         }
     }
 
+    private static Return inputCardNumber() {
+        String input;
+        boolean bool;
+        do {
+            DrawLines(1);
+            System.out.println("Input Card Number");
+            System.out.println("Exit - E");
+            DrawLines(2);
+            input = scanner.nextLine();
+            if (casesInput(input) == Return.EXIT) return Return.EXIT;
+            bool = RegexStr.isCardCorrect(input);
+            if (!bool) {
+                System.out.println("Card number has to be 16 digits long");
+            }
+        } while (!bool);
+        Return.NUMBER.setMessage(input);
+        return Return.NUMBER;
+    }
+
+    private static Return payProcessMenu() {
+        Return menu;
+        do {
+            DrawLines(1);
+            System.out.println(" Payment methods:");
+            System.out.println(" Cash ------ 1");
+            System.out.println(" Bank ------ 2");
+            System.out.println(" Exit ------ E");
+            DrawLines(2);
+            menu = payProcessMenuButtons();
+            if (menu == Return.Success) return Return.Success;
+            if (menu == Return.EXIT) return  Return.EXITEXECUTABLED;
+        } while (true);
+    }
+
+    private static Return payProcessMenuButtons() {
+        String input = scanner.nextLine();
+        Return menu = casesInput(input);
+        if (menu == Return.EXIT) return Return.EXIT;
+        if (menu == Return.NUMBER && menu.getValue() == 1) {
+        }
+        if (menu == Return.NUMBER && menu.getValue() == 2) return executabledExit(bankMethod());
+        System.out.println("Wrong input");
+        Return.ERROR.setError(Errors.InputError);
+        return Return.ERROR;
+    }
+
+    private static Return bankMethod() {
+        Return inputCardNumber_ = inputCardNumber();
+        if (inputCardNumber_ != Return.EXIT) {
+            String cardNumber = inputCardNumber_.getMessage();
+            Return payment = bank.makePayment(order.getOrderPrice(), cardNumber);
+            if (payment == Return.ERROR) {
+                System.out.println(payment.getMessage());
+                return Return.ERROR;
+            }
+            if (payment == Return.Success) {
+                System.out.println(payment.getMessage());
+                return Return.Success;
+            }
+        }
+        return Return.EXIT;
+    }
+
+
+    private static Return OrderOptionsMenuButtons() {
+        String input = scanner.nextLine();
+        Return buttons = casesInput(input);
+        if (buttons == Return.EXIT) return Return.EXIT;
+        if (buttons == Return.NUMBER && buttons.getValue() == 1) {
+            return executabledExit(payProcessMenu());
+        }
+        Return.ERROR.setMessage("Wrong input");
+        return Return.ERROR;
+    }
+
+    private static void OrderOptionsMenu() {
+        while (true) {
+            DrawLines(1);
+            System.out.println("Make payment - 1");
+            System.out.println("Edit order --- 2");
+            System.out.println("Exit --------- E");
+            DrawLines(2);
+            Return menu = OrderOptionsMenuButtons();
+            if (menu == Return.Success) {
+                order = null;
+                initializateOrder();
+                return;
+            }
+            if (menu == Return.EXIT) return;
+        }
+    }
+
+    private static void OrderOptions() {
+        OrderOptionsMenu();
+
+    }
+
     private static boolean Menu_Buttons() {
         String menuInput = scanner.nextLine();
         if (casesInput(menuInput) == Return.EXIT) {
             return false;
         } else if (casesInput(menuInput) == Return.ORDER) {
             order.showOrderedDishes();
+            OrderOptionsMenu();
         } else if (casesInput(menuInput) == Return.NUMBER &&
                 (Return.NUMBER.getValue() >= 1 && Return.NUMBER.getValue() <= Dishes.values().length)) {
             order.addDish(Dishes.values()[Return.NUMBER.getValue() - 1]);
@@ -138,9 +256,11 @@ public final class Menu {
         return true;
     }
 
-    public static void Main_Menu() {
+    public static void Main_Menu(Bank bank_, CashWallet cashWallet_) {
+        addPaymentsInfo(bank_, cashWallet_);
         do {
             //clearConsole();
+            initializateOrder();
             DrawLines(1);
             System.out.println("\t\tMENU:");
             ReadDishes();

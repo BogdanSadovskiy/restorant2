@@ -1,23 +1,45 @@
 package com.restorant;
 
+import com.sun.net.httpserver.Authenticator;
+
 public enum Return {
     EXIT,
+    EXITEXECUTABLED,
     ORDER,
     NUMBER,
     NOTHING,
-    ERROR;
+    ERROR,
+    Success;
+
+    private Errors error;
     private int value;
+    private String message;
 
     Return() {
         this.value = 0;
+        this.message = "";
     }
 
     public void setValue(int value) {
         this.value = value;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
     public int getValue() {
         return this.value;
+    }
+    public Errors getError(){
+        return error;
+    }
+    public void setError(Errors error_){
+        error = error_;
     }
 
 }

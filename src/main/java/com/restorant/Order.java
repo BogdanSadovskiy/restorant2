@@ -94,4 +94,7 @@ public class Order {
         contentFrame(txt, length);
         borderFrame(length);
     }
+    public double getOrderPrice(){
+        return this.orderPrice;
+    }
 }

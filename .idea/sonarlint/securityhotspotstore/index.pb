@@ -78,3 +78,15 @@ U
 %src/main/java/com/restorant/Wish.java,8\9\89057307d7b96b74b3ba336d12d4632a487c220f
 [
 +src/main/java/com/restorant/TwoNumbers.java,7\f\7faba12d0e0abaa325930529bc5e74fc4891f389
+W
+'src/main/java/com/restorant/Wallet.java,2\e\2e4020b5189542dd0415f0593159c8ce61ccd40e
+X
+(src/main/java/com/restorant/EWallet.java,4\9\4922a5218b2dca723c7191c2ff048ebdd0d25dc9
+[
++src/main/java/com/restorant/CashWallet.java,1\5\15e642e76ad093638a612868826a396be9238a24
+U
+%src/main/java/com/restorant/Bank.java,d\c\dc5fb321899728037b0eb35b8c57b27b5be206e3
+]
+-src/main/java/com/restorant/WellcomeInfo.java,b\5\b596a7623fb441ba3a8f2b39f5c1021ca6a0d361
+W
+'src/main/java/com/restorant/Errors.java,2\6\26e9a796017c51712779b3149ff14618f6eb4fdc
