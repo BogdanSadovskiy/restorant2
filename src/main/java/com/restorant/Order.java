@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Order {
     private List<Dishes> orderDishes = new ArrayList<>();
-    private double orderPrice;
+    private int orderPrice;
 
     public void addDish(Dishes dish) {
         orderDishes.add(dish);
@@ -21,12 +21,12 @@ public class Order {
     }
 
     private String OrderPriceCalculating() {
-        double tmpPrice = 0;
+        int tmpPrice = 0;
         for (Dishes d : orderDishes) {
             tmpPrice += d.getPriceWithIngredient();
         }
         this.orderPrice = tmpPrice;
-        return String.format("%.2f", tmpPrice) ;
+        return Bank.centsReader(orderPrice);
     }
 
     private List<String> CreatingOrder() {
@@ -36,15 +36,17 @@ public class Order {
         order.add(" ");
         for (Dishes d : orderDishes) {
             order.add("        Position #" + position);
-            order.add("   " + d.name() + "   " + d.getPrice() + '$');
+            order.add("   " + d.name() + "   " +
+                    Bank.balanceReader(d.getPriceDollars(),d.getPriceCents()) + '$');
             if (!d.getAddIngredients().isEmpty()) {
                 int numberOfIngredients = 1;
                 for (Ingredients i : d.getAddIngredients()) {
-                    order.add("      " + numberOfIngredients + ") " + i.name() + ' ' + i.getPrice() + '$');
+                    order.add("      " + numberOfIngredients + ") " + i.name() + ' ' +
+                            Bank.balanceReader(i.getPriceDollars(),i.getPriceCents())+ '$');
                     numberOfIngredients++;
                 }
             }
-            order.add(" Position prise - " + String.format("%.2f",d.getPriceWithIngredient()) + '$');
+            order.add(" Position prise - " + Bank.centsReader(d.getPriceWithIngredient()) + '$');
             order.add(" ");
             position++;
         }
@@ -94,7 +96,7 @@ public class Order {
         contentFrame(txt, length);
         borderFrame(length);
     }
-    public double getOrderPrice(){
+    public int getOrderPrice(){
         return this.orderPrice;
     }
 }

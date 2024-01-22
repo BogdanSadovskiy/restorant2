@@ -52,11 +52,10 @@ public final class Menu {
         int iterator = 1;
         for (Dishes d : Dishes.values()) {
             System.out.println(iterator + ") " + d.name() +
-                    " (" + d.getDescription() + ')' + " - " + d.getPrice() + "$");
+                    " (" + d.getDescription() + ')' + " - " +
+                    Bank.balanceReader(d.getPriceDollars(),d.getPriceCents()) + "$");
             iterator++;
         }
-        System.out.println("e" + bank.sad().getYourMoney());
-        System.out.println("W" + yourCashWallet.getYourMoney());
     }
 
     private static void IsOrderEmpty() {
@@ -113,7 +112,8 @@ public final class Menu {
         for (Ingredients ingredient : Ingredients.values()) {
             if (!isIngredientAlreadyAdded(dish, ingredient)) {
                 System.out.println(iteratorForNonAddedIngredients + ") " +
-                        ingredient.name() + " - " + ingredient.getPrice() + '$');
+                        ingredient.name() + " - " +
+                        Bank.balanceReader(ingredient.getPriceDollars(),ingredient.getPriceCents())+ '$');
                 tmp.setFirst(iteratorForNonAddedIngredients);  //saving in first Non-added Ingredients
                 iteratorForNonAddedIngredients++;
                 tmp.setSecond(iterator);
@@ -142,7 +142,15 @@ public final class Menu {
             } else System.out.println("Wrong input");
         }
     }
-
+    private  static Return confirmPayment(){
+        System.out.println(Bank.centsReader(order.getOrderPrice()) + "S\nPay - 1\nExit - E");
+        DrawLines(2);
+        String input = scanner.nextLine();
+        Return thisCase = casesInput(input);
+        if(thisCase == Return.EXIT)return Return.EXIT;
+        else if (thisCase== Return.NUMBER && thisCase.getValue() == 1) return Return.Success;
+        System.out.println("Wrong input"); return Return.ERROR;
+    }
     private static Return inputCardNumber() {
         String input;
         boolean bool;
@@ -181,8 +189,7 @@ public final class Menu {
         String input = scanner.nextLine();
         Return menu = casesInput(input);
         if (menu == Return.EXIT) return Return.EXIT;
-        if (menu == Return.NUMBER && menu.getValue() == 1) {
-        }
+        if (menu == Return.NUMBER && menu.getValue() == 1) return executabledExit(cashMethod());
         if (menu == Return.NUMBER && menu.getValue() == 2) return executabledExit(bankMethod());
         System.out.println("Wrong input");
         Return.ERROR.setError(Errors.InputError);
@@ -193,20 +200,47 @@ public final class Menu {
         Return inputCardNumber_ = inputCardNumber();
         if (inputCardNumber_ != Return.EXIT) {
             String cardNumber = inputCardNumber_.getMessage();
-            Return payment = bank.makePayment(order.getOrderPrice(), cardNumber);
-            if (payment == Return.ERROR) {
-                System.out.println(payment.getMessage());
-                return Return.ERROR;
+            while(true){
+                DrawLines(1);
+                System.out.println(WellcomeInfo.CardNumberWriter(cardNumber));
+                Return confirmedPayment = confirmPayment();
+                if(confirmedPayment == Return.EXIT) return Return.EXIT;
+                if(confirmedPayment == Return.Success)break;
             }
-            if (payment == Return.Success) {
-                System.out.println(payment.getMessage());
-                return Return.Success;
-            }
+            return bankMethodFinish(cardNumber);
         }
         return Return.EXIT;
     }
+private static Return bankMethodFinish(String cardNumber){
+    Return payment = bank.makePayment(order.getOrderPrice(), cardNumber);
+    if (payment == Return.ERROR) {
+        System.out.println(payment.getMessage());
+        return Return.ERROR;
+    }
+    System.out.println(payment.getMessage());
+    return Return.Success;
+}
+    private static Return cashMethod(){
+        while(true) {
+            DrawLines(1);
+            System.out.println("Cash Payment");
+            Return thisCase = confirmPayment();
+            if (thisCase == Return.EXIT) return Return.EXIT;
+            if(thisCase == Return.Success) break;
+        }
+        return cashMethodFinish();
+    }
 
-
+    private static  Return cashMethodFinish(){
+        if(!Bank.isEnoughMoney(yourCashWallet,order.getOrderPrice())){
+            System.out.println("Not enough cash");
+            return Return.ERROR;
+        }
+        Bank.paymentProcess(yourCashWallet, order.getOrderPrice());
+        System.out.println("Success");
+        Bank.paymentMessage(order.getOrderPrice(),yourCashWallet);
+        return  Return.Success;
+    }
     private static Return OrderOptionsMenuButtons() {
         String input = scanner.nextLine();
         Return buttons = casesInput(input);
@@ -262,7 +296,7 @@ public final class Menu {
             //clearConsole();
             initializateOrder();
             DrawLines(1);
-            System.out.println("\t\tMENU:");
+            System.out.println("\t\tMENU:\n");
             ReadDishes();
             IsOrderEmpty();
             System.out.println("\nE - exit");
