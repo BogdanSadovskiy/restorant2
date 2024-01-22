@@ -23,25 +23,25 @@ public final class Menu {
 
 
 
-    public static void clearConsole() {
-        String os = System.getProperty("os.name").toLowerCase();
-        System.out.println(os);
-        try {
-            ProcessBuilder processBuilder = new ProcessBuilder();
-            if (os.contains("win")) {
-                processBuilder.command("cmd", "/c", "cls");
-            } else if (os.contains("nix") || os.contains("nux") || os.contains("mac")) {
-                processBuilder.command("clear");
-            } else {
-                System.out.println("Unsupported operation for this OS.");
-                return;
-            }
-            Process process = processBuilder.inheritIO().start();
-            process.waitFor();
-        } catch (IOException | InterruptedException e) {
-            System.out.println("Error clearing the console: " + e.getMessage());
-        }
-    }
+//    public static void clearConsole() {
+//        String os = System.getProperty("os.name").toLowerCase();
+//        System.out.println(os);
+//        try {
+//            ProcessBuilder processBuilder = new ProcessBuilder();
+//            if (os.contains("win")) {
+//                processBuilder.command("cmd", "/c", "cls");
+//            } else if (os.contains("nix") || os.contains("nux") || os.contains("mac")) {
+//                processBuilder.command("clear");
+//            } else {
+//                System.out.println("Unsupported operation for this OS.");
+//                return;
+//            }
+//            Process process = processBuilder.inheritIO().start();
+//            process.waitFor();
+//        } catch (IOException | InterruptedException e) {
+//            System.out.println("Error clearing the console: " + e.getMessage());
+//        }
+//    }
 
     public static void DrawLines(int n) {
         if (n == 1) System.out.println("\n------------------------------------------------------");
@@ -86,6 +86,8 @@ public final class Menu {
         return Return.ERROR;
     }
 
+
+    // CHECKS IF INGREDIENT ALREADY ADDED. IF YES - RETURN TRUE
     private static boolean isIngredientAlreadyAdded(Dishes dish, Ingredients ingredient) {
         List<Ingredients> ingredientsInDish = dish.getAddIngredients();
         for (Ingredients i : ingredientsInDish) {
@@ -108,19 +110,19 @@ public final class Menu {
         int iterator = 1;
         int iteratorForNonAddedIngredients = iterator;
         TwoNumbers tmp = new TwoNumbers();
-
+// IF INGREDIENT ALREADY ADDED ITERATOR ISNT BECOME BIGGER
         for (Ingredients ingredient : Ingredients.values()) {
             if (!isIngredientAlreadyAdded(dish, ingredient)) {
                 System.out.println(iteratorForNonAddedIngredients + ") " +
                         ingredient.name() + " - " +
-                        Bank.balanceReader(ingredient.getPriceDollars(),ingredient.getPriceCents())+ '$');
-                tmp.setFirst(iteratorForNonAddedIngredients);  //saving in first Non-added Ingredients
+                        Bank.balanceReader(ingredient.getPriceDollars(),ingredient.getPriceCents())+ "$");
+                tmp.setFirst(iteratorForNonAddedIngredients);  //saving in first NUMBERS Non-added Ingredients
                 iteratorForNonAddedIngredients++;
-                tmp.setSecond(iterator);
+                tmp.setSecond(iterator); // ADDING ACTUAL ITERATOR OF THIS INGREDIENT
             }
             iterator++;
         }
-        if (tmp.getFirst().size() == 0) System.out.println("\t Nothing to add more...");
+        if (tmp.getFirst().isEmpty()) System.out.println("\t Nothing to add more...");
         return tmp;
     }
 
@@ -251,9 +253,10 @@ private static Return bankMethodFinish(String cardNumber){
         Return.ERROR.setMessage("Wrong input");
         return Return.ERROR;
     }
-
+// Order Options
     private static void OrderOptionsMenu() {
         while (true) {
+            order.showOrderedDishes();
             DrawLines(1);
             System.out.println("Make payment - 1");
             System.out.println("Edit order --- 2");
@@ -279,7 +282,6 @@ private static Return bankMethodFinish(String cardNumber){
         if (casesInput(menuInput) == Return.EXIT) {
             return false;
         } else if (casesInput(menuInput) == Return.ORDER) {
-            order.showOrderedDishes();
             OrderOptionsMenu();
         } else if (casesInput(menuInput) == Return.NUMBER &&
                 (Return.NUMBER.getValue() >= 1 && Return.NUMBER.getValue() <= Dishes.values().length)) {
