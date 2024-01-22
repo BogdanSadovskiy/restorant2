@@ -2,11 +2,12 @@ package com.restorant;
 
 public class WellcomeInfo {
 
-    public static void seperateMoney(double sum, CashWallet cashWallet, EWallet eWallet) {
-        double eWalletSum = sum / 2 + ((sum / 2) / 4);
-        double cashSum = sum - eWalletSum;
-        Bank.paymentProcess(eWallet, eWalletSum);
-        cashWallet.setYourMoney(cashWallet.getYourMoney() + cashSum);
+    public static void seperateMoney(int dollars, int cents, CashWallet cashWallet, EWallet eWallet) {
+        int allCents = Bank.convertToCents(dollars, cents);
+        int eWalletSum = allCents / 2 + ((allCents / 2) / 4);
+        int cashSum = allCents - eWalletSum;
+        Bank.deposit(eWallet, eWalletSum/100, eWalletSum%100);
+        cashWallet.setYourMoney(cashSum/100, cashSum%100);
     }
 
     private static void printHello() {
@@ -31,9 +32,11 @@ public class WellcomeInfo {
     }
 
     private static void yourStats(EWallet eWallet, CashWallet cashWallet) {
-        System.out.println("\tYour starting cash - " + cashWallet.getYourMoney() + "$");
+        System.out.println("\tYour starting cash - " +
+                Bank.balanceReader(cashWallet.getYourDollars(),cashWallet.getYourCents()) + "$");
         System.out.println("\tYour bank card number: " + CardNumberWriter(eWallet.getCardNumber()));
-        System.out.println("\tYour starting bank card money - " + eWallet.getYourMoney() + "$");
+        System.out.println("\tYour starting bank card money - " +
+                Bank.balanceReader(eWallet.getYourDollars(),eWallet.getYourCents()) + "$");
     }
 
     public static void HELLO(EWallet eWallet, CashWallet cashWallet) {

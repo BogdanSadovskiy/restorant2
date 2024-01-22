@@ -1,0 +1,15 @@
+
+>
+java:S1643"Use a StringBuilder instead.(¯ƒå±øÿÿÿÿ8ªìŸõÒ1
+>
+java:S1643"Use a StringBuilder instead.(÷¹¥Áøÿÿÿÿ8«ìŸõÒ1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(—âÛ¤8¸ìŸõÒ1
+L	java:S106"+Replace this use of System.out by a logger.(“ğœüûÿÿÿÿ8ºìŸõÒ1
+T
+java:S6126"2Replace this String concatenation with Text block.(“ğœüûÿÿÿÿ8ºìŸõÒ1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¾£üÿÿÿÿ8ºìŸõÒ1
+G	java:S106#"+Replace this use of System.out by a logger.(äşëÛ8½ìŸõÒ1
+L	java:S106%"+Replace this use of System.out by a logger.(¤öì­şÿÿÿÿ8½ìŸõÒ1
+G	java:S106&"+Replace this use of System.out by a logger.(Ü¡üò8½ìŸõÒ1
+j	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔşÂÔ8¾ìŸõÒ1
