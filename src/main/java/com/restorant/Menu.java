@@ -69,7 +69,7 @@ public final class Menu {
         }
         return case_;
     }
-    private static Return casesInput(String input) {
+    public static Return casesInput(String input) {
         if (Objects.equals(input, "e") || "E".equals(input)) {
             return Return.EXIT;
         }
