@@ -1,8 +1,7 @@
 package com.restorant;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
     private List<Dishes> orderDishes = new ArrayList<>();
@@ -10,11 +9,14 @@ public class Order {
 
     public void addDish(Dishes dish) {
         orderDishes.add(dish);
+        OrderPriceCalculating();
     }
 
-    public void addIngredients(Dishes dish) {
-
+    public void removeDish(Dishes dish) {
+        orderDishes.remove(dish);
+        OrderPriceCalculating();
     }
+
 
     public List<Dishes> getOrderDishes() {
         return this.orderDishes;
@@ -29,20 +31,20 @@ public class Order {
         return Bank.centsReader(orderPrice);
     }
 
-    private List<String> CreatingOrder() {
+    public  List<String> CreatingOrder() {
         List<String> order = new ArrayList<>();
         int position = 1;
         order.add("      Order:");
         order.add(" ");
         for (Dishes d : orderDishes) {
             order.add("        Position #" + position);
-            order.add("   " + d.name() + "   " +
-                    Bank.balanceReader(d.getPriceDollars(),d.getPriceCents()) + '$');
+            order.add("   " + d.name() + ".... " +
+                    Bank.balanceReader(d.getPriceDollars(), d.getPriceCents()) + '$');
             if (!d.getAddIngredients().isEmpty()) {
                 int numberOfIngredients = 1;
                 for (Ingredients i : d.getAddIngredients()) {
-                    order.add("      " + numberOfIngredients + ") " + i.name() + ' ' +
-                            Bank.balanceReader(i.getPriceDollars(),i.getPriceCents())+ '$');
+                    order.add("      " + numberOfIngredients + ") " + i.name() + ".... " +
+                            Bank.balanceReader(i.getPriceDollars(), i.getPriceCents()) + '$');
                     numberOfIngredients++;
                 }
             }
@@ -50,7 +52,7 @@ public class Order {
             order.add(" ");
             position++;
         }
-        order.add(" PRICE - " + OrderPriceCalculating()+ "$");
+        order.add(" PRICE - " + OrderPriceCalculating() + "$");
         return order;
     }
 
@@ -62,7 +64,7 @@ public class Order {
         return orderDishes.isEmpty();
     }
 
-    private int lengthOfLongestString(List<String> txt) {
+    public int lengthOfLongestString(List<String> txt) {
         int maxString = 0;
         for (String str : txt) {
             if (str.length() > maxString) {
@@ -72,7 +74,7 @@ public class Order {
         return maxString;
     }
 
-    private void borderFrame(int length) {
+    public void borderFrame(int length) {
         System.out.print('+');
         for (int i = 0; i < length; i++) {
             System.out.print('-');
@@ -80,7 +82,7 @@ public class Order {
         System.out.println('+');
     }
 
-    private void contentFrame(List<String> txt, int length) {
+    public void contentFrame(List<String> txt, int length) {
         for (String str : txt) {
             System.out.print('|' + str);
             for (int i = 0; i < length - str.length(); i++) {
@@ -96,7 +98,14 @@ public class Order {
         contentFrame(txt, length);
         borderFrame(length);
     }
-    public int getOrderPrice(){
+
+    public int getOrderPrice() {
         return this.orderPrice;
+    }
+
+    public void resetIngredients(){
+        for(Dishes d : orderDishes){
+            d.resetIngredients();
+        }
     }
 }

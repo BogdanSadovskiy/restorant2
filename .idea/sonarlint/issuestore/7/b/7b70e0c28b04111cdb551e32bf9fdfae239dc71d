@@ -1,15 +1,9 @@
 
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(€ÉµÚûÿÿÿÿ8¤¹ôôÒ1
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¢¬¶şÿÿÿÿ8§¹ôôÒ1
-j	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À•¥…8§¹ôôÒ1
-L	java:S106L"+Replace this use of System.out by a logger.(‹Åúÿÿÿÿ8«¹ôôÒ1
-L	java:S106N"+Replace this use of System.out by a logger.(“ØõÒÿÿÿÿÿ8«¹ôôÒ1
-L	java:S106P"+Replace this use of System.out by a logger.(óéĞõùÿÿÿÿ8«¹ôôÒ1
-L	java:S106U"+Replace this use of System.out by a logger.(û²¦Òıÿÿÿÿ8¬¹ôôÒ1
-G	java:S106W"+Replace this use of System.out by a logger.(”¶¼§8¬¹ôôÒ1
-G	java:S106Y"+Replace this use of System.out by a logger.(¹ÔØü8­¹ôôÒ1
-N
-java:S1128"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8åú­÷Ò1
-P
-java:S1128"3Remove this unused import 'java.math.RoundingMode'.(¿ì†‹8åú­÷Ò1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¢¬¶şÿÿÿÿ8­ŠŞ¹Ó1
+o	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î®šøÿÿÿÿ8®ŠŞ¹Ó1
+L	java:S106N"+Replace this use of System.out by a logger.(‹Åúÿÿÿÿ8²ŠŞ¹Ó1
+L	java:S106P"+Replace this use of System.out by a logger.(“ØõÒÿÿÿÿÿ8³ŠŞ¹Ó1
+L	java:S106R"+Replace this use of System.out by a logger.(óéĞõùÿÿÿÿ8³ŠŞ¹Ó1
+L	java:S106W"+Replace this use of System.out by a logger.(û²¦Òıÿÿÿÿ8³ŠŞ¹Ó1
+G	java:S106Y"+Replace this use of System.out by a logger.(”¶¼§8´ŠŞ¹Ó1
+G	java:S106["+Replace this use of System.out by a logger.(¹ÔØü8´ŠŞ¹Ó1

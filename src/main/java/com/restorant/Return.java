@@ -1,10 +1,10 @@
 package com.restorant;
 
-import com.sun.net.httpserver.Authenticator;
-
 public enum Return {
     EXIT,
     EXITEXECUTABLED,
+    ADD,
+    REMOVE,
     ORDER,
     NUMBER,
     NOTHING,

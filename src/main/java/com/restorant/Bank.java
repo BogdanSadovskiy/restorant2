@@ -1,6 +1,5 @@
 package com.restorant;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -90,7 +89,8 @@ public final class Bank {
             return Return.ERROR;
         }
         if (!isEnoughMoney(thisWallet, sum)) {
-            Return.ERROR.setMessage("Not Enough Money\n");
+            Return.ERROR.setMessage("Not Enough Money\nBalance - " +
+                    balanceReader(thisWallet.getYourDollars(), thisWallet.getYourCents()) + "$");
             return Return.ERROR;
         }
         paymentProcess(thisWallet, sum);

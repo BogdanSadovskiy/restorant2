@@ -1,0 +1,7 @@
+
+0
+java:S1700"Rename field "check"(Ò–¿8áˆ‡¹Ó1
+p
+java:S1450"TRemove the "check" field and declare it as a local variable in the relevant methods.(Ò–¿8æˆ‡¹Ó1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(×²È˜8æˆ‡¹Ó1

@@ -1,8 +1,8 @@
 package com.restorant;
 
-import java.io.IOException;
-import java.io.PrintStream;
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 
 public final class Menu {
@@ -70,15 +70,16 @@ public final class Menu {
         return case_;
     }
     public static Return casesInput(String input) {
-        if (Objects.equals(input, "e") || "E".equals(input)) {
+        if (Objects.equals(input, "e") || "E".equals(input))
             return Return.EXIT;
-        }
-        if ((Objects.equals(input, "o") || "O".equals(input)) && !order.isOrderEmpty()) {
+        if ((Objects.equals(input, "o") || "O".equals(input)) && !order.isOrderEmpty())
             return Return.ORDER;
-        }
-        if (Objects.equals(input, "n") || "N".equals(input)) {
+        if (Objects.equals(input, "n") || "N".equals(input))
             return Return.NOTHING;
-        }
+        if(Objects.equals(input, "r") || "R".equals(input))
+            return Return.REMOVE;
+        if(Objects.equals(input, "a") || "A".equals(input))
+            return Return.ADD;
         if (RegexStr.containsNumbers(input)) {
             Return.NUMBER.setValue(Integer.parseInt(input));
             return Return.NUMBER;
@@ -126,7 +127,7 @@ public final class Menu {
         return tmp;
     }
 
-    private static void add_Ingredient_Menu(Dishes dish) {
+    public static void add_Ingredient_Menu(Dishes dish) {
         //clearConsole(); //clear console
         while (true) {
             DrawLines(1);
@@ -236,6 +237,8 @@ private static Return bankMethodFinish(String cardNumber){
     private static  Return cashMethodFinish(){
         if(!Bank.isEnoughMoney(yourCashWallet,order.getOrderPrice())){
             System.out.println("Not enough cash");
+            System.out.println("Balance - " +
+                    Bank.balanceReader(yourCashWallet.getYourDollars(),yourCashWallet.getYourCents())+ "$");
             return Return.ERROR;
         }
         Bank.paymentProcess(yourCashWallet, order.getOrderPrice());
@@ -250,12 +253,16 @@ private static Return bankMethodFinish(String cardNumber){
         if (buttons == Return.NUMBER && buttons.getValue() == 1) {
             return executabledExit(payProcessMenu());
         }
+        if (buttons == Return.NUMBER && buttons.getValue() == 2) {
+            OrderEdit.OrderEditMain(order);
+        }
         Return.ERROR.setMessage("Wrong input");
         return Return.ERROR;
     }
 // Order Options
     private static void OrderOptionsMenu() {
         while (true) {
+            if(OrderEdit.isOrderEmpty(order))return;
             order.showOrderedDishes();
             DrawLines(1);
             System.out.println("Make payment - 1");
@@ -264,6 +271,8 @@ private static Return bankMethodFinish(String cardNumber){
             DrawLines(2);
             Return menu = OrderOptionsMenuButtons();
             if (menu == Return.Success) {
+                Check.getCheck(order);
+                order.resetIngredients();
                 order = null;
                 initializateOrder();
                 return;

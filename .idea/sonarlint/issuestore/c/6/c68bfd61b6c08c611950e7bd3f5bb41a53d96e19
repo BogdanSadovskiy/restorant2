@@ -1,11 +1,9 @@
 
-m	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üèÛ8Ò™úÏ1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ë›Ûªüÿÿÿÿ8Ô™úÏ1
+m	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üèÛ8‚ıö±Ó1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ë›Ûªüÿÿÿÿ8…ıö±Ó1
 Y
-java:S3066"<Lower the visibility of this setter or remove it altogether.(àÃƒ8Ô™úÏ1
+java:S3066"<Lower the visibility of this setter or remove it altogether.(àÃƒ8…ıö±Ó1
 Y
-java:S3066"<Lower the visibility of this setter or remove it altogether.(º¾ƒû8Ô™úÏ1
+java:S3066"<Lower the visibility of this setter or remove it altogether.(º¾ƒû8…ıö±Ó1
 Y
-java:S3066)"<Lower the visibility of this setter or remove it altogether.(üèÛ8Ô™úÏ1
-c
-java:S1128"ARemove this unused import 'com.sun.net.httpserver.Authenticator'.(Ì¢×€úÿÿÿÿ8ìĞŒñÒ1
+java:S3066)"<Lower the visibility of this setter or remove it altogether.(üèÛ8…ıö±Ó1
